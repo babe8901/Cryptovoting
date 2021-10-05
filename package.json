@@ -1,0 +1,23 @@
+{
+  "name": "cryptovoting",
+  "version": "1.0.0",
+  "description": "A voting system based on blockchain",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
+    "lite-server": "^2.6.1",
+    "mysql": "^2.18.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "author": "Shubham Yadav",
+  "license": "ISC"
+}
