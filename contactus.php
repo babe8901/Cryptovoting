@@ -1,3 +1,18 @@
+<?php
+    session_start();
+    include_once "pdo.php";
+
+    $_SESSION['this'] = "contactus.php";
+    if (isset($_SESSION['message'])) {
+        ?>
+            <script>
+                alert("<?=$_SESSION['message']?>");
+            </script>
+        <?php
+        unset($_SESSION['message']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,12 +37,12 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="./index.html"><img src="img/logo.jpg" height="30" width="41" alt=""></a>
+            <a class="navbar-brand" href="./index.php"><img src="img/logo.jpg" height="30" width="41" alt=""></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./blockchain.html"><span class="fa fa-list fa-lg"></span> Blockchain</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.php"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.php"><span class="fa fa-info fa-lg"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./blockchain.php"><span class="fa fa-list fa-lg"></span> Blockchain</a></li>
                         <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
@@ -68,113 +83,16 @@
         </div>
     </header>
 
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close loginCancel">
-                        &times;
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto loginCancel">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="registerModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Register</h4>
-                    <button type="button" class="close registerCancel">
-                        &times;
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="register.php">
-    
-                        <div class="form-row">
-                            <div class="form-group col-sm-6">
-                                <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
-                                <label class="sr-only" for="registerName">Your Name</label>
-                                <input type="text" id="registerName" name="registerName" class="form-control" placeholder="Your Name"/>
-                            </div>
-            
-                            <div class="form-group col-sm-6">
-                                <!-- <i class="fas fa-envelope fa-lg me-3 fa-fw"></i> -->
-                                <label class="sr-only" for="registerEmail">Your Email</label>
-                                <input type="email" id="registerEmail" name="registerEmail" class="form-control" placeholder="Your Email"/>
-                            </div>
-                        </div>
-        
-
-                        <div class="form-row">
-                            <div class="form-group col-sm-6">
-                                <!-- <i class="fas fa-lock fa-lg me-3 fa-fw"></i> -->
-                                <label class="sr-only" for="registerPassword">Password</label>
-                                <input type="password" id="registerPassword" name="registerPassword" class="form-control" placeholder="Password"/>
-                            </div>
-            
-                            <div class="form-group col-sm-6">
-                                <!-- <i class="fas fa-key fa-lg me-3 fa-fw"></i> -->
-                                <label class="sr-only" for="registerRepassword">Repeat your password</label>
-                                <input type="password" id="registerRepassword" name="registerRepassword" class="form-control" placeholder="Repeat your password"/>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row align-items-center">
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> 
-                                        I agree all statements in <a href="#!">Terms of service</a>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <br>
-
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto registerCancel">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Register</button>
-                        </div>
-    
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+        require_once "loginModal.php";
+        require_once "registerModal.php";
+        require_once "voteModal.php";
+    ?>
 
     <div class="container">
         <div class="row">
             <ol class="col-12 breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="./index.php">Home</a></li>
                 <li class="breadcrumb-item active">Contact Us</li>
             </ol>
             <div class="col-12">
@@ -286,9 +204,9 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="./blockchain.html">Blockchain</a></li>
+                        <li><a href="./index.php">Home</a></li>
+                        <li><a href="./aboutus.php">About</a></li>
+                        <li><a href="./blockchain.php">Blockchain</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>

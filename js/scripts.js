@@ -39,4 +39,13 @@ $(document).ready(function() {
     $('.registerCancel').click(function() {
         $('#registerModal').modal('toggle');
     });
+
+    $('#castVote').click(function() {
+        console.log("cast vote");
+        $('#registerModal').modal('toggle');
+    });
+
+    $('.voteCancel').click(function() {
+        $('#voteModal').modal('toggle');
+    });
 })

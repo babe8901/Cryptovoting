@@ -2,12 +2,12 @@
     session_start();
     require_once "pdo.php";
 
+    $loc = $_SESSION['this'];
+
     if (! isset($_SESSION['id'])) {
-        ?>
-            <script>
-                alert("Please login first to cast a vote");
-            </script>           
-        <?php
-        // header("Location: index.html");
+        $_SESSION['message'] = "Please login first to cast a vote";
+        header("Location: $loc");
+    } else {
+        
     }
 ?>

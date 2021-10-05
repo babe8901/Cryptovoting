@@ -2,6 +2,8 @@
     session_start();
     require_once "pdo.php";
 
+    $loc = $_SESSION['this'];
+
     $sql = "INSERT INTO feedback (f_name, l_name, areacode, tel, may_we_contact, contact_mode, feedback, email)
     VALUES (:f_name, :l_name, :areacode, :tel, :may_we_contact, :contact_mode, :feedback, :email)";
     
@@ -17,22 +19,6 @@
         'email' => $_POST['emailid']
     ));
 
-    $_SESSION['success'] = "Feedback received";
+    $_SESSION['message'] = "Feedback received";
+    header("Location: $loc");
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>feedback</title>
-</head>
-<body>
-    <h1>Feedback Submitted successfully</h1>
-
-    <script>
-        alert('Feedback submited');
-    </script>
-</body>
-</html>

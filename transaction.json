@@ -1,0 +1,11 @@
+[
+    {
+        "id" : 1,
+        "type" : "user created",
+        "message" : "New user registered with public id 6857v8tuytutt78t88"
+    },
+    {
+        "id" : 2,
+        "type" : "user voted",
+    }
+]
