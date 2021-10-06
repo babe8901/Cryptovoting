@@ -27,7 +27,7 @@
                 $_SESSION['private_key'] = $row['private_key'];
                 $_SESSION['public_key'] = $row['public_key'];
 
-                $rivate_key = $_SESSION['private_key'];
+                $private_key = $_SESSION['private_key'];
                 $public_key = $_SESSION['public_key'];
 
                 date_default_timezone_set('Asia/Kolkata');

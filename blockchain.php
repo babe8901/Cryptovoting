@@ -11,14 +11,13 @@
         <?php
         unset($_SESSION['message']);
     }
-        
-    $sql = "SELECT COUNT(*) FROM transaction";
-    $res = $pdo->query($sql);
-    $count = $res->fetchColumn();
+
+    $file = file_get_contents("transaction.json");
+    $json = json_decode($file, true);
 
     $sql = "SELECT * FROM transaction ORDER BY id DESC";
     $stmt = $pdo->query($sql);
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
  <!DOCTYPE html>
@@ -85,7 +84,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <!-- <button class="btn btn-block btn-warning"> -->
-                        <a class="btn btn-block nav-link btn-warning" id="castVote" role="button" href="./vote.php">Vote</a>
+                        <a href="#" class="btn btn-block nav-link btn-warning" id="castVote" role="button">Vote</a>
                     <!-- </button> -->
                 </div>
             </div>
@@ -103,7 +102,21 @@
                <hr>
             </div>
         </div>
+
+        <div class="row">
+            <pre>   <?php
+    foreach($json[0] as $key=>$val)
+    {
+        echo "$key : $val    ";
+    }
+    ?> </pre>
+        </div>
+
    </div>
+
+   <?php
+       require_once "transaction.php"; 
+   ?>
 
     <footer class="footer">
         <div class="container">

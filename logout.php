@@ -6,7 +6,6 @@
 
     if (isset($_SESSION['id']) || isset($_SESSION['private_key']) || isset($_SESSION['public_key'])) {
         unset($_SESSION['id']);
-        unset($_SESSION['public_key']);
         unset($_SESSION['private_key']);
 
         $_SESSION['message'] = "Logged out successfully";
@@ -24,6 +23,7 @@
             ":time" => $time,
             ":message" => "User with public id $public_key logged out"
         ));
+        unset($_SESSION['public_key']);
     } else {
         $_SESSION['message'] = "Not logged in";
     }

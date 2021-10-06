@@ -95,13 +95,16 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/transaction.webp" alt="buffet" class="d-block img-fluid w-100">
+                            <img src="img/transaction.webp" alt="transaction" class="d-block img-fluid w-100">
                             <div class="carousel-caption d-none d-md-block">
                                 
                             </div>
                         </div>
                         <div class="carousel-item">
-                            
+                            <img src="img/voting.jpg" alt="Distributed Ledger technology" class="d-block img-fluid w-100 h-100">
+                            <div class="carousel-caption d-none d-md-block">
+
+                            </div>
                         </div>
                     </div>
                     <ol class="carousel-indicators">

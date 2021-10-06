@@ -76,7 +76,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <!-- <button class="btn btn-block btn-warning"> -->
-                        <a class="btn btn-block nav-link btn-warning" id="castVote" role="button" href="./vote.php">Vote</a>
+                        <a href="#" class="btn btn-block nav-link btn-warning" id="castVote" role="button">Vote</a>
                     <!-- </button> -->
                 </div>
             </div>

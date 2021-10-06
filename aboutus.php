@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <!-- <button class="btn btn-block btn-warning"> -->
-                        <a class="btn btn-block nav-link btn-warning" id="castVote" role="button" href="./vote.php">Vote</a>
+                        <a href="#" class="btn btn-block nav-link btn-warning" id="castVote" role="button">Vote</a>
                     <!-- </button> -->
                 </div>
             </div>
@@ -102,7 +102,70 @@
             </div>
         </div>
 
+        <div class="card">
+            <div class="card-header">
+                <h5>What is Blockchain ?</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. 
+                    An asset can be tangible (a house, car, cash, land) or intangible (intellectual property, patents, copyrights, branding). 
+                    Virtually anything of value can be tracked and traded on a blockchain network, reducing risk and cutting costs for all involved.</p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="card-header">
+                <h5>Why blockchain is important ?</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Business runs on information. 
+                    The faster it’s received and the more accurate it is, the better. 
+                    Blockchain is ideal for delivering that information because it provides immediate, 
+                    shared and completely transparent information stored on an immutable ledger that can be accessed only by permissioned network members. 
+                    A blockchain network can track orders, payments, accounts, production and much more. 
+                    And because members share a single view of the truth, you can see all details of a transaction end-to-end, giving you greater confidence, 
+                    as well as new efficiencies and opportunities.</p>
+            </div>
+        </div>
+
+        <br>
+
+<pre><h4>   <strong>Key elements of a Blockchain</strong></h4></pre>
+
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" src="img/dlt.svg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Distributed ledger technology</h5>
+                <p class="card-text">All network participants have access to the distributed ledger and its immutable record of transactions. 
+                    With this shared ledger, transactions are recorded only once, eliminating the duplication of effort that’s typical of traditional business networks.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/immutable_records.svg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Immutable records</h5>
+                <p class="card-text">No participant can change or tamper with a transaction after it’s been recorded to the shared ledger. 
+                    If a transaction record includes an error, a new transaction must be added to reverse the error, and both transactions are then visible.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/smart_contracts.svg" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">Smart contracts</h5>
+                <p class="card-text">To speed transactions, a set of rules — called a smart contract — is stored on the blockchain and executed automatically. 
+                    A smart contract can define conditions for corporate bond transfers, include terms for travel insurance to be paid and much more.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
    </div>
+
+   <br>
 
     <footer class="footer">
         <div class="container">

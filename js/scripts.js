@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     $('#castVote').click(function() {
         console.log("cast vote");
-        $('#registerModal').modal('toggle');
+        $('#voteModal').modal('toggle');
     });
 
     $('.voteCancel').click(function() {

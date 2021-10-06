@@ -40,7 +40,7 @@
   .carousel {
     background: #512DA8; }
     .carousel .carousel-item {
-      height: 300px; }
+      height: 650px; }
       .carousel .carousel-item img {
         position: absolute;
         top: 0;
@@ -63,18 +63,37 @@
     color: floralwhite; }
 
   #loginButton {
-    padding-right: .25cm;
+    padding-right: 0cm;
   }
 
   #registerButton {
-    padding-left: .25cm;
+    padding-left: .5cm;
     padding-right: .5cm;
   }
 
   #logoutButton {
-    padding-left: 1cm;
+    padding-left: .5cm;
   }
 
   #registerCheckbox {
     padding-top: 20cm;
+  }
+
+  th {
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  td {
+    vertical-align: middle;
+    align-items: center;
+  }
+
+  pre {
+    font-size: 20px;
+  }
+
+  .card img {
+    height: 5cm;
   }
